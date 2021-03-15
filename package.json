@@ -1,0 +1,61 @@
+{
+  "name": "StoryTyper",
+  "productName": "Story Typer",
+  "version": "0.1.0",
+  "author": "Brian Basaldua",
+  "description": "Typing game using short stories created by users on a short story writing website",
+  "main": "typingMainv2.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make-mac": "electron-forge make --platform darwin",
+    "make-win": "electron-forge make --platform win32",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=StoryTyperIco.icns --prune=true --out=release-builds"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "12.0.0",
+    "electron-builder": "^21.2.0",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "d3": "^6.6.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "got": "^9.6.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "StoryTyperIco"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "StoryTyper"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

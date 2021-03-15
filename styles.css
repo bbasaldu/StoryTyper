@@ -1,0 +1,165 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51,51,51,0.7);
+    z-index: 10;
+  }
+.textBottomRight{
+    
+}
+.textBottomLeft{
+    
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 10;
+  position: relative;
+}
+.top {
+    width: 100%;
+    height: 30%;
+    background-color: #5784BA;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.topText{
+    position: relative;
+    white-space: nowrap;
+}
+
+.topWidget{
+    flex-grow: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 33%;
+    top: 10%;
+    height: 80%;
+    border: 20px;
+    background-color: darksalmon;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0.6,0.6,0.6,0.2);
+}
+
+.bottom{
+  width: 100%;
+  height: 70%;
+/*    padding: 10px 10px 10px 10px;*/
+  background-color: #9AC8EB;
+  position: relative;
+    
+}
+
+.endScreen{
+    position: relative;
+    margin: auto;
+    top: -80%;
+    background-color: #fff;
+    width: 50%;
+    text-align: center;
+    border-color: #000;
+    
+    border-style: solid;
+    border-radius: 100px;
+    border-width: 5px;
+    height: 50%;
+    visibility: hidden;
+    box-shadow: 0px 0px 1px 100vmax rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+}
+.endScreenItems{
+    position: relative;
+    top:10%;
+}
+.endScreenBtn{
+    width: 50%;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+}
+.textH{
+    height: 95%;
+    position: relative;
+}
+.center{
+    margin: auto;
+}
+.textBox {
+    box-shadow: 0px 0px 10px 10px rgba(0.6,0.6,0.6,0.2);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+    height: 20%;
+    top: 30%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    
+}
+.loadingMsg{
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    margin: auto;
+}
+.boxStyle {
+/*    white-space: nowrap;*/
+    border-radius: 10px;
+/*    overflow: hidden;*/
+    
+    display: flex;
+    justify-content: space-around;
+/*    margin: auto;*/
+}
+.fakeTextBox {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    margin: auto;
+    position: relative;
+}
+.cursor {
+    left: 100px;
+    top: 100px;
+    position: absolute;
+}
+.text{
+    left: 50%;
+    position: relative;
+}
+.link:link{
+    color: #9AC8EB;
+    text-decoration: none;
+}
+.link:visited{
+    color: #5784BA;
+    text-decoration: none;
+}
+.link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
