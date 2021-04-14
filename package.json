@@ -9,9 +9,22 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "make-mac": "electron-forge make --platform darwin",
-    "make-win": "electron-forge make --platform win32",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=StoryTyperIco.icns --prune=true --out=release-builds"
+    "build-installer": "electron-builder"
+  },
+  "build": {
+	"appId": "StoryTyper",
+	"win": {
+		"target": ["nsis"],
+		"icon": "StoryTyperWin2.ico"
+	},
+	"nsis": {
+		"installerIcon": "StoryTyperWin2.ico",
+		"uninstallerIcon": "StoryTyperWin2.ico",
+		"uninstallDisplayName": "Story Typer",
+		"license": "license.txt",
+		"oneClick": false,
+		"allowToChangeInstallationDirectory": true
+	}
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
@@ -19,21 +32,18 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "12.0.0",
-    "electron-builder": "^21.2.0",
-    "electron-packager": "^15.2.0"
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
     "d3": "^6.6.0",
     "electron-squirrel-startup": "^1.0.0",
-    "got": "^9.6.0"
+    "got": "^11.8.2"
   },
   "config": {
     "forge": {
-      "packagerConfig": {
-        "icon": "StoryTyperIco"
-      },
+      "packagerConfig": {},
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
